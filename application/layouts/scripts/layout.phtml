@@ -1,0 +1,26 @@
+<!-- application/layouts/scripts/layout.phtml -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Roman Dobrynin homework</title>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/slides.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/tytabs.jquery.min.js"></script>
+<script src="js/jquery.slides.min.js"></script>
+<!--[if lte IE 7]><script src="js/ie7/warning.js"></script><script>window.onload=function(){e("js/ie6/")}</script><![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie.css" media="all" />
+<![endif]-->
+
+
+</head>
+<body>
+	<?php echo $this->render('header.phtml') ?>
+	<?php echo $this->layout()->content ?>
+	<?php echo $this->render('footer.phtml') ?>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- application/views/scripts/header.phtml-->
+<header class="header">	
+	<div id="tooltip"></div>
+	<div class="header-top">
+		<div class="header-links">
+			<div class="switch-top">
+				<span id ="login-box">
+					<a href="index.php"><img class="triangle" src="images/check_list.png"></a>
+					<span class="trinagle">Login</span>
+				</span>
+				<span id ="lang">
+					<a href="index.php"><img class="triangle" src="images/check_list.png"></a>
+					<span><img class="triangle" src="images/swe_flag.png"></span>
+				</span>
+			</div><!--switch-top-->
+			<div class="show-prices">
+				<span class="tax">Show prices:</span>
+				<input type="radio" id="r1" name="rr" />
+				<label for="r1"><span></span>Incl. tax</label>
+				<input type="radio" id="r2" name="rr" />
+				<label for="r2"><span></span>Ex. tax</label>
+			</div> <!--show-prices-->
+		</div><!--header-links-->
+	</div><!--header-top-->
+	<div class="header-bottom">
+		<div class="main-nav">
+			<a class="sitename" href="index.php">Demostore</a>
+			<ul id="menu">
+				<li><a id ="default" class ="highlite" oncklick="highlie(this);"href="index.php">Home</a></li>
+				<li><a onclick="highlite(this);" href="#">Women</a></li>
+				<li><a onclick="highlite(this);" href="#">Men</a></li>
+				<li><a onclick="highlite(this);" href="#">Kids</a></li>
+			</ul>
+		<div class="nav-divider"></div>
+			<div id="cart">
+				<span id="item-cart" onMouseOver="div.show('cart-hover')" onMouseOut="div.hide('cart-hover')"><a class="cursor">You have 2 items in cart</a></span>
+				<span id="checkout"><a href="index.php">Go to checkout</a></span>
+				<div id="cart-hover" onMouseOver="div.show('cart-hover')" onMouseOut="div.hide('cart-hover')" >
+					<div id="content-item-1">
+						<img class="box-hover"src="images/box_hover.gif">
+						<p>Lorem ipsum dolor</br>
+						99:-</br></p>
+						<a class="readmore" href="#">Read more</a>
+						<a href="#" data-tooltip="remove item"><img class="remove" src="images/remove.png"></a>
+					</div><!--content-hover-->	
+					<div id="content-item-2">
+						<img class="box-hover"src="images/box_hover.gif">
+						<p>Lorem ipsum dolor</br>
+						99:-</br></p>
+						<a class="readmore" href="#">Read more</a>
+						<a href="#" data-tooltip="remove item"><img class="remove" src="images/remove.png"></a>
+					</div><!--content-hover-->
+
+				</div><!--cart-hover-->
+			</div><!--cart-->
+			<div class="search-dark">
+				<form method="get" action="#" id="search">
+		  			<input name="search" type="text" size="40" placeholder="Search..." data-tooltip="max-width on focus" />
+				</form>
+			</div><!--search-dark-->			
+		</div><!--main-nav-->
+	</div><!--header-bottom-->			
+</div><!--header-->

@@ -1,0 +1,73 @@
+<?php 
+
+	$config = Zend_Registry::get('baseUrl');
+	
+	$offset = $config['offset'];
+
+?>
+
+<h1>Vaimo Frontend Homework Instruction</h1>
+<p>
+		This is a homework created for you where you, by using your best practice methods, 
+		are going to implement the provided design using HTML, CSS, javascript and PHP. The 
+		test is used to measure your knowledge and skill level in these techniques and your 
+		test will be reviewed by a frontend developer that, among other areas, will look at 
+		the following:
+</p>
+<ul>
+	<li>How well your implementation match the provided design</li>
+	<li>How well written your code is</li>
+	<li>How well structured your code is</li>
+	<li>How optimized your code is</li>
+	<li>
+		How cross-browser safe your implementation is in the current and major prior release of:
+		<ul>
+			<li>Internet Explorer (Windows)</li>
+			<li>Chrome (Windows & Mac OS)</li>
+			<li>Firefox (Windows & Mac OS)</li>
+			<li>Safari (Windows & Mac OS)</li>
+		</ul>
+	</li>
+</ul>
+<p>
+	The design consists of a homepage with five additional compositions that 
+	show the different interactions a user can do with this page. 
+</p>
+<p>
+		These are the different layer compositions: 
+</p>
+<ul>
+	<li><a href="<?php echo $offset ?>images/instruction/index.png">Index</a></li>
+	<li><a href="<?php echo $offset ?>images/instruction/index-main-nav-item-hover.png">Index Main Nav Item Hover</a></li>
+	<li><a href="<?php echo $offset ?>images/instruction/index-cart-hover.png">Index Cart Hover</a></li>
+	<li><a href="<?php echo $offset ?>images/instruction/index-newsletter-subscribe-failed.png">Index Newsletter Subscribe Failed</a></li>
+	<li><a href="<?php echo $offset ?>images/instruction/index-newsletter-subscribe-loading.png">Index Newsletter Subscribe Loading</a></li>
+	<li><a href="<?php echo $offset ?>images/instruction/index-newsletter-subscribe-success.png">Index Newsletter Subscribe Success</a></li>		
+</ul>
+<p>
+	The PSD for the design is located <a href="<?php echo $offset ?>/images/instruction/homework.psd">here</a>
+</p>
+<p>
+	As you can see, the design consists of a homepage with five additional compositions that 
+	show the different interactions a user should be able to do with this page. The design should 
+	be centered in the web browser and header and footer backgrounds should be repeatead 
+	horizontally, covering the entire width of the browser window. 
+</p>
+<p>
+	There are three layer compositions that illustrates a newsletter signup interaction. 
+	To complete the newsletter subscribe ajax-functionality you have a pre-defined controller named newsletter.php located in 
+	application/controllers/newsletter.php. You should use the controller function named subscribe in there to generate the 
+	response for the ajax request. You can find the URL for the ajax-request: <a href="<?php echo $offset ?>newsletter/subscribe/">here</a>. 
+	If the user writes an incorrect email address and press submit or if the email address is valid a corresponding message, 
+	as stated in the compositions above, should be shown. You don't need to save any email address into a database, only validate it.
+</p>
+<p>
+	You are free to implement the design how you want (eg. use jQuery, a boilerplate, a css reset, change doctype and so on) as long as you 
+	do it within this Zend Framework setup that has been given to you. To get you going, click <a href="<?php echo $offset ?>">here</a> and view page source. 
+</p>
+<p>
+	If you have any further questions just send an email to <a href="mailto:martin.nilsson@vaimo.com">martin.nilsson@vaimo.com</a>
+</p>
+<p>
+	Good luck!
+</p>

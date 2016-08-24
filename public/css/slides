@@ -1,0 +1,47 @@
+#slides {
+      display: none;
+    }
+
+    .slidesjs-pagination {
+      margin: 0 auto;
+      padding-left:390px;
+      padding-top: 12px;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      margin: 0 auto;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(../images/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+      margin-left:15px;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+
+    #slides {
+      display: none
+    }
+
+    .container {
+      margin: 0 auto
+    }
