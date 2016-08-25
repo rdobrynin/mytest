@@ -1,0 +1,20 @@
+html {
+  background-color: #fff;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $open-sans;
+  font-size: 16px;
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  border-top: 20px solid $brand-color;
+}

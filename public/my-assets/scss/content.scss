@@ -1,14 +1,17 @@
-html {
-  background-color: #f8f8f8;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-}
-
-
-.content {
+.container {
+  position: relative;
   width: 100%;
-  max-width: 960px;
+  height: 100%;
+  max-width: $default-width;
+  margin: 0 auto;
+  &.content {
+    padding: 20px 0;
+  }
+
+  section {
+    padding: 20px 0;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
 }

@@ -1,0 +1,32 @@
+//   top cart
+.header-top-cart {
+  width: auto;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  padding: 0 10px;
+  border-radius: 4px;
+  height: 36px;
+  border: 1px solid #b6c2c9;
+  top: 36px;
+  text-align: center;
+ a {
+   text-decoration: none;
+   font: 12px/36px $open-sans;
+   font-weight: 400;
+   color: $blue-text-color;
+   strong {
+     font-weight: 700;
+     padding-left: 2px;
+   }
+   img {
+     vertical-align: sub;
+     margin-right: 7px;
+     top: 3px;
+     position: relative;
+   }
+ }
+  &:hover {
+    cursor: pointer;
+  }
+}

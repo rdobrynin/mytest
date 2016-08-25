@@ -1,0 +1,36 @@
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: $footer-bg;
+  padding-bottom: 40px;
+  text-align: center;
+  .container  {
+    position: relative;
+    .col-3 {
+      width: 33%;
+      float: left;
+      h3 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: left;
+        font: 18px/1.3 $open-sans;
+        font-weight: 700;
+      }
+      ul {
+        padding-top: 20px;
+        li {
+          text-align: left;
+          a {
+            text-decoration: none;
+            font: 14px/2.0 $open-sans;
+            text-transform: uppercase;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

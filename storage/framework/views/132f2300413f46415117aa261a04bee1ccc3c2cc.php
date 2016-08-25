@@ -9,14 +9,25 @@
 </head>
 <body>
 <header>
-    <?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <div class="container">
+      <?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  </div>
 </header>
 <div class="container">
-<h1>test</h1>
+  <section>
+      <h1>Lorem ipsum dolor sit.</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, laudantium.</p>
+  </section>
+    <section class="products">
+        <?php echo e(dd($products)); ?>
+
+    </section>
 </div>
 
 <footer>
+    <div class="container">
     <?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </div>
 </footer>
 <?php /*End footer*/ ?>
 </body>
