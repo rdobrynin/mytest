@@ -1,4 +1,4 @@
-<div class="col-3">
+<div class="col-4">
     <nav>
         <h3>top categories</h3>
         <ul>
@@ -9,7 +9,7 @@
         </ul>
     </nav>
 </div>
-<div class="col-3">
+<div class="col-4">
     <nav>
         <h3>customer service</h3>
         <ul>
@@ -23,7 +23,8 @@
 
 <div class="col-3">
     <h3>newsletter subscribe</h3>
-    <form action="#">
+    <form action="#" id="subscribe">
+        <span class="mail"></span>
         <input type="text">
         <button type="button" class="button">subscribe</button>
     </form>

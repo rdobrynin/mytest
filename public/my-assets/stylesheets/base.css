@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$footer-bg".
-        on line 6 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/footer.scss
+Error: Undefined variable: "$open-sans".
+        on line 36 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss
 
-1: footer {
-2:   position: relative;
-3:   padding: 1rem;
-4:   float: left;
-5:   width: 100%;
-6:   background-color: $footer-bg;
-7:   padding-bottom: 40px;
-8:   text-align: center;
-9:   .container  {
-10:     position: relative;
-11:     .col-4, .col-3 {
+31: *:after {
+32:   box-sizing: inherit;
+33: }
+34: 
+35: body {
+36:   font-family: $open-sans;
+37:   font-size: 16px;
+38:   position: relative;
+39:   margin: 0;
+40:   min-height: 100%;
+41:   border-top: 20px solid $brand-color;
 
 Backtrace:
-C:/MAMP/htdocs/vaimo/public/my-assets/scss/footer.scss:6
+C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss:36
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -66,4 +66,4 @@ C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$footer-bg\".\A         on line 6 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/footer.scss\A \A 1: footer {\A 2:   position: relative;\A 3:   padding: 1rem;\A 4:   float: left;\A 5:   width: 100%;\A 6:   background-color: $footer-bg;\A 7:   padding-bottom: 40px;\A 8:   text-align: center;\A 9:   .container  {\A 10:     position: relative;\A 11:     .col-4, .col-3 {"; }
+  content: "Error: Undefined variable: \"$open-sans\".\A         on line 36 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss\A \A 31: *:after {\A 32:   box-sizing: inherit;\A 33: }\A 34: \A 35: body {\A 36:   font-family: $open-sans;\A 37:   font-size: 16px;\A 38:   position: relative;\A 39:   margin: 0;\A 40:   min-height: 100%;\A 41:   border-top: 20px solid $brand-color;"; }

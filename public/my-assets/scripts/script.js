@@ -22,6 +22,19 @@ $(function () {
       }
   );
 
+
+    ShoppingCart.click(function() {
+        $.ajax({
+            type: 'GET',
+            url: 'cart/get',
+            dataType:'json',
+            success: function (data) {
+          console.log(data)
+            }
+        });
+    });
+
+
 });
 // end ready
 

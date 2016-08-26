@@ -1,16 +1,15 @@
 footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  position: relative;
   padding: 1rem;
+  float: left;
+  width: 100%;
   background-color: $footer-bg;
   padding-bottom: 40px;
   text-align: center;
   .container  {
     position: relative;
-    .col-3 {
-      width: 33%;
+    .col-4, .col-3 {
+      width: 30%;
       float: left;
       h3 {
         text-transform: uppercase;
@@ -30,6 +29,9 @@ footer {
             color: #fff;
           }
         }
+      }
+      &.col-3 {
+        width: 40%;
       }
     }
   }
