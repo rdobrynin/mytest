@@ -1,21 +1,25 @@
 form#subscribe {
   position: relative;
   input[type="text"] {
-    border: 1px solid #e6e6e6;
-    clear: both;
-    color: #88837a;
-    font: 13px/17px $open-sans;
-    display: inline-block;
-    height: 30px;
-    width: 68%;
-    padding: 10px 10px 12px 32px;
-    margin: 20px 0;
+    display: block;
+    box-sizing: border-box;
+    line-height: 1.0;
+    font-size: 14px;
+    height: 30PX;
     border-radius: 3px;
+    width: 230px;
+    left: 0;
+    border: 0;
+    float: left;
+    margin-top: 20px;
+    padding-left: 35px;
     &:focus {outline:none;}
   }
-  button {
-    position: relative;
+  input[type="submit"] {
+    position: absolute;
     height: 30px;
+    top: 20px;
+    left: 240px;
   }
 
   &:after {
@@ -28,9 +32,13 @@ form#subscribe {
     font-size: 18px;
     line-height: 46px;
     text-align: center;
-    border-radius: 0 4px 4px 0;
     position: absolute;
-    top: 26px;
-    left: 14px;
+    top: 23px;
+    left: 3px;
+    background-position: 3px 4px;
+  }
+
+  input {
+    line-height: normal !important;
   }
 }

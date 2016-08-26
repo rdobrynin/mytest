@@ -1,26 +1,24 @@
 /*
-Error: Undefined variable: "$open-sans".
-        on line 7 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/form.scss
+Error: Undefined variable: "$assets".
+        on line 29 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/form.scss
 
-2:   position: relative;
-3:   input[type="text"] {
-4:     border: 1px solid #e6e6e6;
-5:     clear: both;
-6:     color: #88837a;
-7:     font: 13px/17px $open-sans;
-8:     display: inline-block;
-9:     height: 30px;
-10:     width: 68%;
-11:     padding: 10px 10px 12px 32px;
-12:     margin: 20px 0;
+24: 
+25:   &:after {
+26:     content: "";
+27:     width: 30px;
+28:     height: 30px;
+29:     background-image:  url(#{$assets}/images/mail.png);
+30:     background-repeat: no-repeat;
+31:     color: #8f8e8e;
+32:     font-size: 18px;
+33:     line-height: 46px;
+34:     text-align: center;
 
 Backtrace:
-C:/MAMP/htdocs/vaimo/public/my-assets/scss/form.scss:7
+C:/MAMP/htdocs/vaimo/public/my-assets/scss/form.scss:29
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/list_literal.rb:63:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/list_literal.rb:63:in `_perform'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/string_interpolation.rb:93:in `_perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
@@ -81,4 +79,4 @@ C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$open-sans\".\A         on line 7 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/form.scss\A \A 2:   position: relative;\A 3:   input[type=\"text\"] {\A 4:     border: 1px solid #e6e6e6;\A 5:     clear: both;\A 6:     color: #88837a;\A 7:     font: 13px/17px $open-sans;\A 8:     display: inline-block;\A 9:     height: 30px;\A 10:     width: 68%;\A 11:     padding: 10px 10px 12px 32px;\A 12:     margin: 20px 0;"; }
+  content: "Error: Undefined variable: \"$assets\".\A         on line 29 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/form.scss\A \A 24: \A 25:   &:after {\A 26:     content: \"\";\A 27:     width: 30px;\A 28:     height: 30px;\A 29:     background-image:  url(#{$assets}/images/mail.png);\A 30:     background-repeat: no-repeat;\A 31:     color: #8f8e8e;\A 32:     font-size: 18px;\A 33:     line-height: 46px;\A 34:     text-align: center;"; }

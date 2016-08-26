@@ -23,4 +23,7 @@
   user-select: none;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  &:hover, &:focus {
+    background-color: #309ea1;
+  }
 }

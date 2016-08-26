@@ -7,7 +7,7 @@
             </div>
             <div class="item-description">
                 <div class="item-title"><?php echo e($item['title']); ?></div>
-                <div class="item-price <?php if($item['specialPrice']): ?> item-price-old <?php endif; ?>"><?php echo e($item['price']); ?>&nbsp;<?php if($item['specialPrice']): ?> <span class="item-special-price"><?php echo e($item['specialPrice']); ?></span><?php endif; ?></div>
+                <div class="item-price"><?php if($item['specialPrice']): ?> <del>&#8364;<?php echo e($item['price']); ?></del> <?php else: ?> &#8364;<?php echo e($item['price']); ?> <?php endif; ?>&nbsp;<?php if($item['specialPrice']): ?> <span class="item-special-price">&#8364;<?php echo e($item['specialPrice']); ?></span><?php endif; ?></div>
                 <button class="button">add to cart</button>
 
             </div>

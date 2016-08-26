@@ -7,7 +7,7 @@
             </div>
             <div class="item-description">
                 <div class="item-title">{{$item['title']}}</div>
-                <div class="item-price @if($item['specialPrice']) item-price-old @endif">{{$item['price']}}&nbsp;@if($item['specialPrice']) <span class="item-special-price">{{$item['specialPrice']}}</span>@endif</div>
+                <div class="item-price">@if($item['specialPrice']) <del>&#8364;{{$item['price']}}</del> @else &#8364;{{$item['price']}} @endif&nbsp;@if($item['specialPrice']) <span class="item-special-price">&#8364;{{$item['specialPrice']}}</span>@endif</div>
                 <button class="button">add to cart</button>
 
             </div>

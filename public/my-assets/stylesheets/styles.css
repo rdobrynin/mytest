@@ -393,39 +393,8 @@ header .navigation nav + nav {
   text-transform: uppercase;
   padding: 0 10px;
 }
-/* line 102, ../scss/content.scss */
-.container ol.products-list {
-  margin-right: -19px;
-}
-/* line 104, ../scss/content.scss */
-.container ol.products-list li {
-  text-align: center;
-  padding-bottom: 20px;
-  float: left;
-}
-/* line 108, ../scss/content.scss */
-.container ol.products-list li.col-4 {
-  width: 23%;
-  margin-right: 2%;
-}
-/* line 112, ../scss/content.scss */
-.container ol.products-list li .item-container {
-  position: relative;
-  border: 1px solid #b6c2c9;
-  max-width: 262px;
-  padding: 20px 10px 25px 10px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-/* line 120, ../scss/content.scss */
-.container ol.products-list li .item-container a.product-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 
-/* line 132, ../scss/content.scss */
+/* line 105, ../scss/content.scss */
 .alert {
   float: left;
   width: 100%;
@@ -461,6 +430,10 @@ header .navigation nav + nav {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+/* line 26, ../scss/button.scss */
+.button:hover, .button:focus {
+  background-color: #309ea1;
+}
 
 /* line 1, ../scss/form.scss */
 form#subscribe {
@@ -468,27 +441,31 @@ form#subscribe {
 }
 /* line 3, ../scss/form.scss */
 form#subscribe input[type="text"] {
-  border: 1px solid #e6e6e6;
-  clear: both;
-  color: #88837a;
-  font: 13px/17px "Open Sans", sans-serif;
-  display: inline-block;
-  height: 30px;
-  width: 68%;
-  padding: 10px 10px 12px 32px;
-  margin: 20px 0;
+  display: block;
+  box-sizing: border-box;
+  line-height: 1.0;
+  font-size: 14px;
+  height: 30PX;
   border-radius: 3px;
+  width: 230px;
+  left: 0;
+  border: 0;
+  float: left;
+  margin-top: 20px;
+  padding-left: 35px;
 }
-/* line 14, ../scss/form.scss */
+/* line 16, ../scss/form.scss */
 form#subscribe input[type="text"]:focus {
   outline: none;
 }
-/* line 16, ../scss/form.scss */
-form#subscribe button {
-  position: relative;
+/* line 18, ../scss/form.scss */
+form#subscribe input[type="submit"] {
+  position: absolute;
   height: 30px;
+  top: 20px;
+  left: 240px;
 }
-/* line 21, ../scss/form.scss */
+/* line 25, ../scss/form.scss */
 form#subscribe:after {
   content: "";
   width: 30px;
@@ -499,10 +476,14 @@ form#subscribe:after {
   font-size: 18px;
   line-height: 46px;
   text-align: center;
-  border-radius: 0 4px 4px 0;
   position: absolute;
-  top: 26px;
-  left: 14px;
+  top: 23px;
+  left: 3px;
+  background-position: 3px 4px;
+}
+/* line 41, ../scss/form.scss */
+form#subscribe input {
+  line-height: normal !important;
 }
 
 /* line 2, ../scss/layout/top-cart.scss */
@@ -540,6 +521,61 @@ form#subscribe:after {
 /* line 29, ../scss/layout/top-cart.scss */
 .header-top-cart:hover {
   cursor: pointer;
+}
+
+/* line 1, ../scss/layout/product.scss */
+ol.products-list {
+  margin-right: -19px;
+}
+/* line 3, ../scss/layout/product.scss */
+ol.products-list li {
+  text-align: center;
+  padding-bottom: 20px;
+  float: left;
+}
+/* line 7, ../scss/layout/product.scss */
+ol.products-list li.col-4 {
+  width: 23%;
+  margin-right: 2%;
+}
+/* line 11, ../scss/layout/product.scss */
+ol.products-list li .item-container {
+  position: relative;
+  border: 1px solid #b6c2c9;
+  max-width: 262px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* line 19, ../scss/layout/product.scss */
+ol.products-list li .item-container a.product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 28, ../scss/layout/product.scss */
+.item-description {
+  margin: 20px 0;
+  text-align: center;
+}
+/* line 31, ../scss/layout/product.scss */
+.item-description .item-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  color: #314350;
+}
+/* line 38, ../scss/layout/product.scss */
+.item-description .item-price {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+/* line 42, ../scss/layout/product.scss */
+.item-description .item-special-price {
+  color: #f05050;
 }
 
 /* line 1, ../scss/footer.scss */

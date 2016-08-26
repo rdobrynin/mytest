@@ -25,7 +25,7 @@
     <h3>newsletter subscribe</h3>
     <form action="#" id="subscribe">
         <span class="mail"></span>
-        <input type="text">
-        <button type="button" class="button">subscribe</button>
+        <input type="text" placeholder="Enter your email address">
+        <input type="submit" class="button" value="Subscribe">
     </form>
 </div>

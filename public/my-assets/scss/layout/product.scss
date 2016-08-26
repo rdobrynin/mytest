@@ -1,0 +1,45 @@
+ol.products-list {
+  margin-right: -19px;
+  li {
+    text-align: center;
+    padding-bottom: 20px;
+    float: left;
+    &.col-4 {
+      width: 23%;
+      margin-right: 2%;
+    }
+    .item-container {
+      position: relative;
+      border: 1px solid #b6c2c9;
+      max-width: 262px;
+      padding: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      a.product-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.item-description {
+ margin:  20px 0;
+  text-align: center;
+  .item-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    color:$blue-text-color;
+  }
+  .item-price {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .item-special-price {
+    color: $active-color;
+  }
+}
