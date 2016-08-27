@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$open-sans".
-        on line 36 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss
+        on line 37 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss
 
-31: *:after {
-32:   box-sizing: inherit;
-33: }
-34: 
-35: body {
-36:   font-family: $open-sans;
-37:   font-size: 16px;
-38:   position: relative;
-39:   margin: 0;
-40:   min-height: 100%;
-41:   border-top: 20px solid $brand-color;
+32: *:after {
+33:   box-sizing: inherit;
+34: }
+35: 
+36: body {
+37:   font-family: $open-sans;
+38:   font-size: 16px;
+39:   position: relative;
+40:   margin: 0;
+41:   min-height: 100%;
+42:   border-top: 20px solid $brand-color;
 
 Backtrace:
-C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss:36
+C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss:37
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -66,4 +66,4 @@ C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$open-sans\".\A         on line 36 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss\A \A 31: *:after {\A 32:   box-sizing: inherit;\A 33: }\A 34: \A 35: body {\A 36:   font-family: $open-sans;\A 37:   font-size: 16px;\A 38:   position: relative;\A 39:   margin: 0;\A 40:   min-height: 100%;\A 41:   border-top: 20px solid $brand-color;"; }
+  content: "Error: Undefined variable: \"$open-sans\".\A         on line 37 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/base.scss\A \A 32: *:after {\A 33:   box-sizing: inherit;\A 34: }\A 35: \A 36: body {\A 37:   font-family: $open-sans;\A 38:   font-size: 16px;\A 39:   position: relative;\A 40:   margin: 0;\A 41:   min-height: 100%;\A 42:   border-top: 20px solid $brand-color;"; }
