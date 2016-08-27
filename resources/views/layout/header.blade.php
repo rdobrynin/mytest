@@ -10,7 +10,7 @@
     </div>
 </div>
 <a href="javascript:void(0);" class="menu-hamburger mobile"><img src="{{url('my-assets/images/hamburger.png')}}" alt="mobile-menu"></a>
-<div class="navigation desktop">
+<div class="navigation">
     <nav>
         <ul>
             <li><a href="#">Women</a>

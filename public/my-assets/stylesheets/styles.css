@@ -187,7 +187,11 @@ header .menu-hamburger img {
   left: 9px;
 }
 
-/* line 2, ../scss/layout/top-navigation.scss */
+/* line 1, ../scss/layout/top-navigation.scss */
+.navigation {
+  display: none;
+}
+/* line 3, ../scss/layout/top-navigation.scss */
 .desktop .navigation {
   width: 100%;
   bottom: 0;
@@ -197,14 +201,14 @@ header .menu-hamburger img {
   z-index: 10;
   display: block;
 }
-/* line 12, ../scss/layout/top-navigation.scss */
+/* line 13, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li {
   position: relative;
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 17, ../scss/layout/top-navigation.scss */
+/* line 18, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li a {
   display: block;
   color: #314350;
@@ -215,26 +219,26 @@ header .menu-hamburger img {
   line-height: 28px;
   padding: 0 20px;
 }
-/* line 28, ../scss/layout/top-navigation.scss */
+/* line 29, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li.current-item a {
   color: #f05050;
 }
-/* line 32, ../scss/layout/top-navigation.scss */
+/* line 33, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover, .desktop .navigation nav ul li:focus {
   background: #1d2b36;
 }
-/* line 34, ../scss/layout/top-navigation.scss */
+/* line 35, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover a, .desktop .navigation nav ul li:focus a {
   color: #fff;
 }
-/* line 38, ../scss/layout/top-navigation.scss */
+/* line 39, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul {
   display: block;
   border-top: 5px solid #3bc0c3;
   background-color: #edf1f2;
   top: 25px;
 }
-/* line 42, ../scss/layout/top-navigation.scss */
+/* line 43, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul:before {
   content: '';
   position: absolute;
@@ -253,34 +257,34 @@ header .menu-hamburger img {
   top: -5px;
   left: 0;
 }
-/* line 56, ../scss/layout/top-navigation.scss */
+/* line 57, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li {
   -webkit-transition: background-color 0.2s;
   -moz-transition: background-color 0.2s;
   -o-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-/* line 61, ../scss/layout/top-navigation.scss */
+/* line 62, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li a {
   color: #314350;
 }
-/* line 65, ../scss/layout/top-navigation.scss */
+/* line 66, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li:hover a {
   color: #fff;
 }
-/* line 68, ../scss/layout/top-navigation.scss */
+/* line 69, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li:hover ul {
   top: -15px;
 }
-/* line 71, ../scss/layout/top-navigation.scss */
+/* line 72, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li:hover ul li a {
   color: #314350;
 }
-/* line 75, ../scss/layout/top-navigation.scss */
+/* line 76, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li:hover ul li:hover a {
   color: #fff;
 }
-/* line 84, ../scss/layout/top-navigation.scss */
+/* line 85, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li.parent a:after {
   content: '';
   position: absolute;
@@ -292,15 +296,15 @@ header .menu-hamburger img {
   border-bottom: 4px solid transparent;
   border-left: 4px solid #31434f;
 }
-/* line 100, ../scss/layout/top-navigation.scss */
+/* line 101, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li:hover.parent a:after {
   border-left: 4px solid #fff;
 }
-/* line 107, ../scss/layout/top-navigation.scss */
+/* line 108, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul li:hover > ul li:hover.parent ul li a:after {
   display: none;
 }
-/* line 118, ../scss/layout/top-navigation.scss */
+/* line 119, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul ul {
   display: none;
   position: absolute;
@@ -309,35 +313,35 @@ header .menu-hamburger img {
   background: #fff;
   padding: 0;
 }
-/* line 125, ../scss/layout/top-navigation.scss */
+/* line 126, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul ul li {
   float: none;
   width: 130px;
 }
-/* line 128, ../scss/layout/top-navigation.scss */
+/* line 129, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul ul li a {
   line-height: 120%;
   padding: 8px 15px;
 }
-/* line 132, ../scss/layout/top-navigation.scss */
+/* line 133, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul ul li:hover > ul {
   top: 0;
 }
-/* line 133, ../scss/layout/top-navigation.scss */
+/* line 134, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul ul li:hover > ul:before {
   background: #fff;
 }
-/* line 139, ../scss/layout/top-navigation.scss */
+/* line 140, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav ul ul ul {
   top: 0;
   left: 100%;
 }
-/* line 146, ../scss/layout/top-navigation.scss */
+/* line 147, ../scss/layout/top-navigation.scss */
 .desktop .navigation nav + nav {
   position: absolute;
   right: 0;
 }
-/* line 151, ../scss/layout/top-navigation.scss */
+/* line 152, ../scss/layout/top-navigation.scss */
 .mobile .navigation {
   display: none;
   position: absolute;
@@ -347,11 +351,11 @@ header .menu-hamburger img {
   width: 100%;
   border-bottom: 2px solid #3bc0c3;
 }
-/* line 160, ../scss/layout/top-navigation.scss */
+/* line 161, ../scss/layout/top-navigation.scss */
 .mobile .navigation ul li {
   border-top: 1px solid #3bc0c3;
 }
-/* line 162, ../scss/layout/top-navigation.scss */
+/* line 163, ../scss/layout/top-navigation.scss */
 .mobile .navigation ul li a {
   text-transform: uppercase;
   text-decoration: none;
@@ -360,15 +364,15 @@ header .menu-hamburger img {
   padding: 0 20px;
   line-height: 36px;
 }
-/* line 170, ../scss/layout/top-navigation.scss */
+/* line 171, ../scss/layout/top-navigation.scss */
 .mobile .navigation ul li ul {
   text-indent: 10px;
 }
-/* line 174, ../scss/layout/top-navigation.scss */
+/* line 175, ../scss/layout/top-navigation.scss */
 .mobile .navigation ul li.parent ul {
   text-indent: 40px;
 }
-/* line 179, ../scss/layout/top-navigation.scss */
+/* line 180, ../scss/layout/top-navigation.scss */
 .mobile .navigation ul li.current-item a {
   color: #f05050;
 }
