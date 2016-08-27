@@ -4,44 +4,124 @@ $(function () {
   // Global variables
     var ShoppingCartWrapper = $('.shopping-topcart-wrapper');
     var ShoppingCartItems = $('.shopping-topcart-items');
-        // load cards json
-        $.ajax({
-            type: 'GET',
-            url: 'cart/get',
-            dataType:'json',
-            cache: true,
-            success: function (data) {
-                if(data.items.length > 0) {
-                    $('#total-qty-item').text(data.items.length);
 
-                    $.each(data.items , function (index, value){
-                        console.log(value);
-                        ShoppingCartItems.append(
-                            $('<li />').append(
-                                $('<img />', {src: value.imgSrc, alt: value.name}),
-                                    $('<span />', {text: value.name, 'class': 'title-cart'}),
-                                    $('<span />', {text: value.qty + ' x \u20AC' + value.price, 'class': 'item-descr'}),
-                                    $('<a />', {text: ' x ', 'class': 'remove-item'})
-                            )
-                        );
-                    });
 
-                    ShoppingCartWrapper.hover(
-                        function () {
-                            ShoppingCartItems.stop().slideDown("fast");
-                        },
+    var AjaxCartItemCacheGet ={
+        url: 'cart/get',
+        init: function(){
+                AjaxCartItemCacheGet.requestData();
+        },
 
-                        function () {
-                                ShoppingCartItems.hide();
-                        }
-                    );
-
-                    ShoppingCartItems.append(
-                        $('<a />', {text: 'go to checkout', 'class': 'button'})
-                    );
+        requestData: function(){
+            var self = AjaxCartItemCacheGet;
+            //localStorage.clear();
+            // Ajax Query
+            $.ajax({
+                url: self.url,
+                type: 'GET',
+                dataType: 'json',
+                localCache   : true,
+                cacheTTL     : 1/60,  // in hours
+                cacheKey     : 'post',
+                isCacheValid : function(){
+                return true;
+            },
+                success: function(data){
+                    self.update(data);
+                },
+                error: function(data){
+                    self.error(data)
                 }
+            });
+        },
+
+        update: function(Data){
+            var self = AjaxCartItemCacheGet;
+            console.log(Data);
+            if(Data.items.length > 0) {
+                $('#total-qty-item').text(Data.items.length);
+                var itemSumma = parseFloat(0);
+                $.each(Data.items , function (index, value){
+                    ShoppingCartItems.append(
+                        $('<li />').append(
+                            $('<img />', {src: value.imgSrc, alt: value.name}),
+                            $('<span />', {text: value.name, 'class': 'title-cart'}),
+                            $('<span />', {text : value.qty + ' x \u20AC' + value.price, 'class': 'item-descr'}),
+                            $('<a />', {text: ' x ', 'class': 'remove-item'})
+                        )
+                    );
+                    itemSumma = parseFloat(itemSumma) +  parseFloat(value.price);
+                });
+
+                $('span.price', $("#top-shopping-cart")).text(Data.totalPrice);
+                ShoppingCartWrapper.hover(
+                    function () {
+                        ShoppingCartItems.stop().slideDown("fast");
+                    },
+
+                    function () {
+                        ShoppingCartItems.hide();
+                    }
+                );
+
+                ShoppingCartItems.append(
+                    $('<a />', {text: 'go to checkout', 'class': 'button'})
+                );
             }
-        });
+        },
+
+        error: function(Data){
+            console.log('Failed to get data');
+        }
+    };
+
+    AjaxCartItemCacheGet.init();
+
+
+
+
+
+
+
+
+
+    // load cards json
+        //$.ajax({
+        //    type: 'GET',
+        //    url: 'cart/get',
+        //    dataType:'json',
+        //    success: function (data) {
+        //        if(data.items.length > 0) {
+        //            $('#total-qty-item').text(data.items.length);
+        //
+        //            $.each(data.items , function (index, value){
+        //                console.log(value);
+        //                ShoppingCartItems.append(
+        //                    $('<li />').append(
+        //                        $('<img />', {src: value.imgSrc, alt: value.name}),
+        //                            $('<span />', {text: value.name, 'class': 'title-cart'}),
+        //                            $('<span />', {text : value.qty + ' x \u20AC' + value.price, 'class': 'item-descr'}),
+        //                            $('<a />', {text: ' x ', 'class': 'remove-item'})
+        //                    )
+        //                );
+        //            });
+        //
+        //            ShoppingCartWrapper.hover(
+        //                function () {
+        //                    ShoppingCartItems.stop().slideDown("fast");
+        //                },
+        //
+        //                function () {
+        //                        ShoppingCartItems.hide();
+        //                }
+        //            );
+        //
+        //            ShoppingCartItems.append(
+        //                $('<a />', {text: 'go to checkout', 'class': 'button'})
+        //            );
+        //        }
+        //    }
+        //});
 
 
 //     Newsletter subscribe
