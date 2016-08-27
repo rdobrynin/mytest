@@ -1,8 +1,9 @@
 <a id="logo" href="{{ url('/') }}">logo</a>
 <div class="header-top-cart" id="top-shopping-cart">
-    <a href="javascript:void(0)" data-qty="0" class="topcart">
-        <span class="minicart"><img src="{{url('my-assets/images/Shopping-Cart-Icon.png')}}" alt="shopping-cart"></span><span class="qty">3</span>&nbsp;<span>items in your cart</span>&nbsp;<strong>&#8364;<span class="price">75.00</span></strong>
+    <a href="javascript:void(0)" class="topcart">
+        <span class="minicart"><img src="{{url('my-assets/images/Shopping-Cart-Icon.png')}}" alt="shopping-cart"></span><span id="total-qty-item">0</span>&nbsp;<span>items in your cart</span>&nbsp;<strong>&#8364;<span class="price">75.00</span></strong>
     </a>
+            <ol class="shopping-topcart-items"></ol>
 </div>
 <div class="navigation">
     <nav>

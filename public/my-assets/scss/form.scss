@@ -53,7 +53,7 @@ form {
   top: 60px;
   &:before {
     content: '';
-    background-image: url(../../my-assets/images/ajax_loader.gif);
+    background-image: url(#{$assets}/images/ajax_loader.gif);
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
@@ -65,7 +65,7 @@ form {
     color: #3c8039;
     &:before {
       content: '';
-      background-image: url(../../my-assets/images/accept.png);
+      background-image: url(#{$assets}/images/accept.png);
       background-repeat: no-repeat;
       width: 30px;
       height: 30px;
@@ -78,7 +78,7 @@ form {
     color: $active-color;
     &:before {
       content: '';
-      background-image: url(../../my-assets/images/error.png);
+      background-image: url(#{$assets}/images/error.png);
       background-repeat: no-repeat;
       width: 30px;
       height: 30px;

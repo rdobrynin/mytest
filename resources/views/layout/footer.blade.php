@@ -23,10 +23,10 @@
 
 <div class="col-3">
     <h3>newsletter subscribe</h3>
-    <form action="newsletter/subscribe" method="GET" id="subscribe">
+    <form action="{{url('newsletter/subscribe')}}" method="GET" id="subscribe">
         <span class="mail"></span>
         <input type="text" name="email" placeholder="Enter your email address">
         <input type="submit" class="button" value="Subscribe">
-        <div class="ajax-process">Subscribeing to newsletter</div>
+        <div class="ajax-process"></div>
     </form>
 </div>

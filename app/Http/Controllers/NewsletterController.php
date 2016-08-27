@@ -21,7 +21,7 @@ class NewsletterController extends Controller
         }
          else {
             $data['success'] = true;
-             $data['email'] = 'Subscription succesfull.';
+             $data['email'] = 'Subscription successfull.';
         }
         return response()->json($data);
     }

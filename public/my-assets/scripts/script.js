@@ -6,7 +6,6 @@ $(function () {
 
 
   ShoppingCart.hover(
-
       function () {
         console.log('in');
       },
@@ -17,14 +16,30 @@ $(function () {
   );
 
 
-        // load carts json
+        // load cards json
         $.ajax({
             type: 'GET',
             url: 'cart/get',
             dataType:'json',
             success: function (data) {
                 if(data.items.length > 0) {
-                    console.log(data.items);
+                    $('#total-qty-item').text(data.items.length);
+
+                    $.each(data.items , function (index, value){
+                        console.log(value);
+                        $('.shopping-topcart-items').show().append(
+                            $('<li />').append(
+                                $('<img />', {src: value.imgSrc, alt: value.name}),
+                                    $('<span />', {text: value.name, 'class': 'title-cart'}),
+                                    $('<span />', {text: value.qty + ' x \u20AC' + value.price, 'class': 'item-descr'}),
+                                    $('<a />', {text: ' x ', 'class': 'remove-item'})
+                            )
+                        )
+                    });
+
+                    $('.shopping-topcart-items').append(
+                        $('<a />', {text: 'go to checkout', 'class': 'button'})
+                    );
                 }
             }
         });
@@ -39,9 +54,9 @@ $(function () {
             url: "newsletter/subscribe",
             data: form.serialize(),
             beforeSend: function() {
-             $('.ajax-process', form).show();
+                $('.ajax-process', form).show();
                 $('.ajax-process', form).removeClass('success').removeClass('error');
-                $('.ajax-process', form).text('Subscribeing to newsletter');
+                $('.ajax-process', form).text('Subscribing to newsletter');
             },
             success: function(data) {
                 setTimeout(function(){
@@ -70,6 +85,10 @@ $(function () {
     });
 
 
+    // remove item from top cart
+    $('.remove-item', $('.shopping-topcart-items')).on('click', function(){
+       alert('remove item: ' + $(this).closest('li').find('.title-cart').text());
+    });
 });
 // end ready
 
