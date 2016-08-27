@@ -6,6 +6,7 @@ $(function () {
         rootObject = $('html'),
         ShoppingCartWrapper = $('.shopping-topcart-wrapper'),
         ShoppingCartItems = $('.shopping-topcart-items'),
+        ShoppingCartMobile = $('#top-shopping-cart'),
         hamburger = $('.menu-hamburger');
 
 
@@ -86,7 +87,7 @@ $(function () {
                     );
                 }
                 else if(rootObject.hasClass('mobile')) {
-                    ShoppingCartWrapper.click(function(){
+                    ShoppingCartMobile.click(function(){
                         ShoppingCartItems.toggle();
                     });
                 }
