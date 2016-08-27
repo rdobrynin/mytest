@@ -154,6 +154,7 @@ header #logo {
   background-repeat: no-repeat;
   height: 55px;
   width: 268px;
+  z-index: 99999;
 }
 @media (max-width: 415px) {
   /* line 14, ../scss/header.scss */
@@ -164,7 +165,7 @@ header #logo {
     height: 33px;
   }
 }
-/* line 31, ../scss/header.scss */
+/* line 32, ../scss/header.scss */
 header .menu-hamburger {
   width: 45px;
   min-width: 45px;
@@ -180,7 +181,7 @@ header .menu-hamburger {
   text-align: center;
   z-index: 120;
 }
-/* line 45, ../scss/header.scss */
+/* line 46, ../scss/header.scss */
 header .menu-hamburger img {
   position: absolute;
   top: 7px;
@@ -741,14 +742,26 @@ form input {
     right: 0;
   }
 }
-/* line 29, ../scss/layout/top-cart.scss */
+/* line 27, ../scss/layout/top-cart.scss */
 .header-top-cart a {
   text-decoration: none;
   font: 12px/36px "Open Sans", sans-serif;
   font-weight: 400;
   color: #314350;
 }
-/* line 35, ../scss/layout/top-cart.scss */
+/* line 32, ../scss/layout/top-cart.scss */
+.header-top-cart a.topcart {
+  padding-left: 28px;
+  right: 0;
+  width: 45px;
+}
+@media (max-width: 767px) {
+  /* line 32, ../scss/layout/top-cart.scss */
+  .header-top-cart a.topcart {
+    position: absolute;
+  }
+}
+/* line 41, ../scss/layout/top-cart.scss */
 .header-top-cart a .minicart {
   height: 36px;
   width: 45px;
@@ -759,11 +772,12 @@ form input {
   left: 0;
 }
 @media (max-width: 767px) {
-  /* line 35, ../scss/layout/top-cart.scss */
+  /* line 41, ../scss/layout/top-cart.scss */
   .header-top-cart a .minicart {
+    margin-right: -5px;
     background-color: #edf1f2;
     border: 1px solid #edf1f2;
-    left: 5px;
+    left: -5px;
     height: 36px;
     width: 45px;
     position: absolute;
@@ -774,7 +788,7 @@ form input {
   }
 }
 @media (max-width: 365px) {
-  /* line 35, ../scss/layout/top-cart.scss */
+  /* line 41, ../scss/layout/top-cart.scss */
   .header-top-cart a .minicart {
     float: right;
     margin-top: 0;
@@ -782,12 +796,12 @@ form input {
     position: relative;
   }
 }
-/* line 65, ../scss/layout/top-cart.scss */
+/* line 72, ../scss/layout/top-cart.scss */
 .header-top-cart a strong {
   font-weight: 700;
   padding-left: 2px;
 }
-/* line 69, ../scss/layout/top-cart.scss */
+/* line 76, ../scss/layout/top-cart.scss */
 .header-top-cart a img {
   vertical-align: sub;
   margin-right: 2px;
@@ -795,22 +809,32 @@ form input {
   position: relative;
   border-radius: 3px;
 }
-/* line 77, ../scss/layout/top-cart.scss */
+/* line 84, ../scss/layout/top-cart.scss */
 .header-top-cart:hover {
   cursor: pointer;
 }
-/* line 81, ../scss/layout/top-cart.scss */
+/* line 88, ../scss/layout/top-cart.scss */
 .header-top-cart .topcart {
   padding-left: 28px;
 }
 @media (max-width: 767px) {
-  /* line 83, ../scss/layout/top-cart.scss */
+  /* line 88, ../scss/layout/top-cart.scss */
+  .header-top-cart .topcart {
+    padding-left: 0;
+    position: absolute;
+    right: 61px;
+    width: 45px;
+    height: 35px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 97, ../scss/layout/top-cart.scss */
   .header-top-cart .topcart #total-qty-item, .header-top-cart .topcart .item-text, .header-top-cart .topcart strong {
     display: none;
   }
 }
 
-/* line 92, ../scss/layout/top-cart.scss */
+/* line 106, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper {
   min-width: 210px;
   width: auto;
@@ -823,19 +847,20 @@ form input {
   min-height: 35px;
 }
 @media (max-width: 767px) {
-  /* line 92, ../scss/layout/top-cart.scss */
+  /* line 106, ../scss/layout/top-cart.scss */
   .shopping-topcart-wrapper {
     min-width: 45px;
-    Z-INDEX: 1;
+    z-index: 99999;
   }
 }
 @media (max-width: 365px) {
-  /* line 92, ../scss/layout/top-cart.scss */
+  /* line 106, ../scss/layout/top-cart.scss */
   .shopping-topcart-wrapper {
-    min-width: auto;
+    min-width: 100%;
+    top: 30PX;
   }
 }
-/* line 109, ../scss/layout/top-cart.scss */
+/* line 124, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper .shopping-topcart-items {
   display: none;
   min-width: 270px;
@@ -852,7 +877,7 @@ form input {
   padding-top: 5px;
 }
 @media (max-width: 365px) {
-  /* line 109, ../scss/layout/top-cart.scss */
+  /* line 124, ../scss/layout/top-cart.scss */
   .shopping-topcart-wrapper .shopping-topcart-items {
     right: 0;
     display: none;
@@ -868,22 +893,23 @@ form input {
     border-bottom: 2px solid #3bc0c3;
     padding-bottom: 10px;
     min-width: 100%;
+    margin-top: -10px;
   }
 }
-/* line 139, ../scss/layout/top-cart.scss */
+/* line 155, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper .shopping-topcart-items li {
   float: left;
   position: relative;
   width: 100%;
 }
-/* line 143, ../scss/layout/top-cart.scss */
+/* line 159, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper .shopping-topcart-items li img {
   width: 60px;
   position: relative;
   float: left;
   border-radius: 3px;
 }
-/* line 149, ../scss/layout/top-cart.scss */
+/* line 165, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper .shopping-topcart-items li .title-cart {
   font-weight: 700;
   text-transform: uppercase;
@@ -892,21 +918,21 @@ form input {
   left: 70px;
   position: absolute;
 }
-/* line 157, ../scss/layout/top-cart.scss */
+/* line 173, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper .shopping-topcart-items li .item-descr {
   position: absolute;
   left: 70px;
   top: 35px;
   font-size: 12px;
 }
-/* line 163, ../scss/layout/top-cart.scss */
+/* line 179, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper .shopping-topcart-items li a.remove-item {
   position: absolute;
   right: 15px;
   top: 10px;
   text-indent: -9999em;
 }
-/* line 168, ../scss/layout/top-cart.scss */
+/* line 184, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper .shopping-topcart-items li a.remove-item:after {
   content: '';
   background-image: url(../../my-assets/images/remove-icon.png);
@@ -918,7 +944,7 @@ form input {
   left: -10px;
   top: 9px;
 }
-/* line 181, ../scss/layout/top-cart.scss */
+/* line 197, ../scss/layout/top-cart.scss */
 .shopping-topcart-wrapper .shopping-topcart-items .button {
   float: right;
   margin: 10px;

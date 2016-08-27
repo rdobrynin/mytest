@@ -6,7 +6,7 @@ $(function () {
         rootObject = $('html'),
         ShoppingCartWrapper = $('.shopping-topcart-wrapper'),
         ShoppingCartItems = $('.shopping-topcart-items'),
-        ShoppingCartMobile = $('#top-shopping-cart'),
+        ShoppingCartMobile = $('.minicart'),
         hamburger = $('.menu-hamburger');
 
 
@@ -87,12 +87,10 @@ $(function () {
                     );
                 }
                 else if(rootObject.hasClass('mobile')) {
-                    ShoppingCartMobile.click(function(){
+                    $('#top-shopping-cart').on("click", function(){
                         ShoppingCartItems.toggle();
                     });
                 }
-
-
                 ShoppingCartItems.append(
                     $('<a />', {text: 'go to checkout', 'class': 'button'})
                 );
@@ -106,7 +104,7 @@ $(function () {
 
     hamburger.click(function() {
         $(".navigation").toggle();
-    })
+    });
 
     AjaxCartItemCacheGet.init();
 
