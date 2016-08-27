@@ -33,6 +33,7 @@
      padding-left: 28px;
      @media (max-width: $max-mobile-width) {
        position: absolute;
+       z-index: 99999999;
      }
      right: 0;
      width: 45px;
@@ -50,7 +51,7 @@
        margin-right: -5px;
        background-color: #edf1f2;
        border: 1px solid #edf1f2;
-       left: -5px;
+       left: 5px;
        height: 36px;
        width: 45px;
        position: absolute;
@@ -63,7 +64,7 @@
      @media (max-width: 365px) {
        float: right;
        margin-top: 0;
-       margin-right: 57px;
+       margin-right: 70px;
        position: relative;
      }
 
@@ -76,8 +77,9 @@
    img {
      vertical-align: sub;
      margin-right: 2px;
-     top: 2px;
+     top: 4px;
      position: relative;
+     width: 27px;
      border-radius: $default-border-radius;
    }
  }

@@ -87,7 +87,7 @@ $(function () {
                     );
                 }
                 else if(rootObject.hasClass('mobile')) {
-                    $('#top-shopping-cart').on("click", function(){
+                    $('.topcart').on("click", function(){
                         ShoppingCartItems.toggle();
                     });
                 }
