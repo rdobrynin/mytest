@@ -7,7 +7,7 @@ Error: Undefined variable: "$assets".
 26:     content: "";
 27:     width: 30px;
 28:     height: 30px;
-29:     background-image:  url(#{$assets}/images/mail.png);
+29:     background-image:  url(#{$assets}/images/mail.png) ;
 30:     background-repeat: no-repeat;
 31:     color: #8f8e8e;
 32:     font-size: 18px;
@@ -79,4 +79,4 @@ C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$assets\".\A         on line 29 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/form.scss\A \A 24: \A 25:   &:after {\A 26:     content: \"\";\A 27:     width: 30px;\A 28:     height: 30px;\A 29:     background-image:  url(#{$assets}/images/mail.png);\A 30:     background-repeat: no-repeat;\A 31:     color: #8f8e8e;\A 32:     font-size: 18px;\A 33:     line-height: 46px;\A 34:     text-align: center;"; }
+  content: "Error: Undefined variable: \"$assets\".\A         on line 29 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/form.scss\A \A 24: \A 25:   &:after {\A 26:     content: \"\";\A 27:     width: 30px;\A 28:     height: 30px;\A 29:     background-image:  url(#{$assets}/images/mail.png) ;\A 30:     background-repeat: no-repeat;\A 31:     color: #8f8e8e;\A 32:     font-size: 18px;\A 33:     line-height: 46px;\A 34:     text-align: center;"; }

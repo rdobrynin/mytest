@@ -1,5 +1,15 @@
+<?php
+
+// sort array by title
+usort($products, function($a, $b){
+    return (string) $a['title'] < (string) $b['title'] ? 1 : -1;
+});
+
+?>
+
+
 <ol class="products-list">
-    <?php foreach($products as $item): ?>
+    <?php foreach(array_reverse($products) as $item): ?>
         <li class="col-4">
             <div class="item-container">
                 <a href="javascript:void(0);" title="<?php echo e($item['title']); ?>" class="product-image">
@@ -7,7 +17,10 @@
             </div>
             <div class="item-description">
                 <div class="item-title"><?php echo e($item['title']); ?></div>
-                <div class="item-price"><?php if($item['specialPrice']): ?> <del>&#8364;<?php echo e($item['price']); ?></del> <?php else: ?> &#8364;<?php echo e($item['price']); ?> <?php endif; ?>&nbsp;<?php if($item['specialPrice']): ?> <span class="item-special-price">&#8364;<?php echo e($item['specialPrice']); ?></span><?php endif; ?></div>
+                <div class="item-price"><?php if($item['specialPrice']): ?>
+                        <del>&#8364;<?php echo e($item['price']); ?></del> <?php else: ?> &#8364;<?php echo e($item['price']); ?> <?php endif; ?>
+                    &nbsp;<?php if($item['specialPrice']): ?> <span
+                            class="item-special-price">&#8364;<?php echo e($item['specialPrice']); ?></span><?php endif; ?></div>
                 <button class="button">add to cart</button>
 
             </div>

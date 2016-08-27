@@ -39,10 +39,6 @@
     <section>
             @include('layout.products')
     </section>
-    @else
-      <div class="alert">
-          <h2>No one favourites found</h2>
-      </div>
     @endif
 </div>
 

@@ -39,10 +39,6 @@
     <section>
             <?php echo $__env->make('layout.products', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     </section>
-    <?php else: ?>
-      <div class="alert">
-          <h2>No one favourites found</h2>
-      </div>
     <?php endif; ?>
 </div>
 
