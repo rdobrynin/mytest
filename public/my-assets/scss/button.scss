@@ -21,8 +21,8 @@
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
   &:hover, &:focus {
     background-color: #309ea1;
     outline: none;

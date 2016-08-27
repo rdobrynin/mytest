@@ -315,7 +315,13 @@ header .navigation nav + nav {
   background-size: cover;
   background-position: 50%;
 }
-/* line 26, ../scss/content.scss */
+@media (max-width: 939px) {
+  /* line 19, ../scss/content.scss */
+  .container section.home-block .static-block {
+    width: 100%;
+  }
+}
+/* line 29, ../scss/content.scss */
 .container section.home-block .static-block .banner-title {
   position: absolute;
   top: 62px;
@@ -328,16 +334,16 @@ header .navigation nav + nav {
   font-weight: 700;
   padding: 10px 0;
 }
-/* line 37, ../scss/content.scss */
+/* line 40, ../scss/content.scss */
 .container section.home-block .static-block .banner-title h3 {
   font-size: 24px;
   line-height: 1.3;
 }
-/* line 41, ../scss/content.scss */
+/* line 44, ../scss/content.scss */
 .container section.home-block .static-block .banner-title h4 {
   font-size: 12px;
 }
-/* line 46, ../scss/content.scss */
+/* line 49, ../scss/content.scss */
 .container section.home-block article {
   width: 49%;
   float: right;
@@ -345,14 +351,23 @@ header .navigation nav + nav {
   font-weight: 700;
   margin-left: 1%;
 }
-/* line 52, ../scss/content.scss */
+@media (max-width: 939px) {
+  /* line 49, ../scss/content.scss */
+  .container section.home-block article {
+    margin: 0;
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+  }
+}
+/* line 60, ../scss/content.scss */
 .container section.home-block article h1 {
   font-size: 42px;
   line-height: 1.3;
   padding-bottom: 5px;
   margin-top: -15px;
+  font-weight: 700;
 }
-/* line 58, ../scss/content.scss */
+/* line 67, ../scss/content.scss */
 .container section.home-block article h2 {
   text-transform: uppercase;
   font-size: 24px;
@@ -360,18 +375,25 @@ header .navigation nav + nav {
   line-height: 1.3;
   padding-bottom: 5px;
 }
-/* line 65, ../scss/content.scss */
+/* line 74, ../scss/content.scss */
 .container section.home-block article p {
   font-size: 18px;
 }
-/* line 74, ../scss/content.scss */
+/* line 83, ../scss/content.scss */
 .container section .content-header {
   width: 100%;
   text-align: left;
   position: relative;
   padding-left: 30px;
 }
-/* line 79, ../scss/content.scss */
+@media (max-width: 767px) {
+  /* line 83, ../scss/content.scss */
+  .container section .content-header {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+/* line 92, ../scss/content.scss */
 .container section .content-header:before {
   content: " ";
   position: absolute;
@@ -382,7 +404,13 @@ header .navigation nav + nav {
   top: 9px;
   z-index: 1;
 }
-/* line 89, ../scss/content.scss */
+@media (max-width: 767px) {
+  /* line 92, ../scss/content.scss */
+  .container section .content-header:before {
+    display: none;
+  }
+}
+/* line 105, ../scss/content.scss */
 .container section .content-header span.title {
   font: 24px/0.7 "Open Sans", sans-serif;
   color: #314350;
@@ -394,7 +422,7 @@ header .navigation nav + nav {
   padding: 0 10px;
 }
 
-/* line 105, ../scss/content.scss */
+/* line 124, ../scss/content.scss */
 .alert {
   float: left;
   width: 100%;
@@ -427,8 +455,8 @@ header .navigation nav + nav {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 /* line 26, ../scss/button.scss */
 .button:hover, .button:focus {
@@ -466,7 +494,18 @@ form input[type="submit"] {
   top: 20px;
   left: 240px;
 }
-/* line 25, ../scss/form.scss */
+@media (max-width: 939px) {
+  /* line 18, ../scss/form.scss */
+  form input[type="submit"] {
+    position: relative;
+    height: 30px;
+    top: 32px;
+    left: 0;
+    float: left;
+    clear: both;
+  }
+}
+/* line 33, ../scss/form.scss */
 form:after {
   content: "";
   width: 30px;
@@ -482,12 +521,12 @@ form:after {
   left: 3px;
   background-position: 3px 4px;
 }
-/* line 41, ../scss/form.scss */
+/* line 49, ../scss/form.scss */
 form input {
   line-height: normal !important;
 }
 
-/* line 46, ../scss/form.scss */
+/* line 54, ../scss/form.scss */
 .ajax-process {
   display: none;
   position: absolute;
@@ -497,7 +536,7 @@ form input {
   left: 20px;
   top: 60px;
 }
-/* line 54, ../scss/form.scss */
+/* line 62, ../scss/form.scss */
 .ajax-process:before {
   content: '';
   background-image: url(../../my-assets/images/ajax_loader.gif);
@@ -508,11 +547,11 @@ form input {
   left: -20px;
   top: -3px;
 }
-/* line 64, ../scss/form.scss */
+/* line 72, ../scss/form.scss */
 .ajax-process.success {
   color: #3c8039;
 }
-/* line 66, ../scss/form.scss */
+/* line 74, ../scss/form.scss */
 .ajax-process.success:before {
   content: '';
   background-image: url(../../my-assets/images/accept.png);
@@ -523,11 +562,11 @@ form input {
   left: -20px;
   top: -3px;
 }
-/* line 77, ../scss/form.scss */
+/* line 85, ../scss/form.scss */
 .ajax-process.error {
   color: #f05050;
 }
-/* line 79, ../scss/form.scss */
+/* line 87, ../scss/form.scss */
 .ajax-process.error:before {
   content: '';
   background-image: url(../../my-assets/images/error.png);
@@ -666,18 +705,32 @@ form input {
 ol.products-list {
   margin-right: -19px;
 }
-/* line 3, ../scss/layout/product.scss */
+@media (max-width: 767px) {
+  /* line 1, ../scss/layout/product.scss */
+  ol.products-list {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
+}
+/* line 7, ../scss/layout/product.scss */
 ol.products-list li {
   text-align: center;
   padding-bottom: 20px;
   float: left;
 }
-/* line 7, ../scss/layout/product.scss */
+/* line 11, ../scss/layout/product.scss */
 ol.products-list li.col-4 {
   width: 23%;
   margin-right: 2%;
 }
-/* line 11, ../scss/layout/product.scss */
+@media (max-width: 767px) {
+  /* line 11, ../scss/layout/product.scss */
+  ol.products-list li.col-4 {
+    width: 46%;
+    margin-right: 4%;
+  }
+}
+/* line 19, ../scss/layout/product.scss */
 ol.products-list li .item-container {
   position: relative;
   border: 1px solid #b6c2c9;
@@ -687,19 +740,19 @@ ol.products-list li .item-container {
   margin-right: auto;
   text-align: center;
 }
-/* line 19, ../scss/layout/product.scss */
+/* line 27, ../scss/layout/product.scss */
 ol.products-list li .item-container a.product-image img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 28, ../scss/layout/product.scss */
+/* line 36, ../scss/layout/product.scss */
 .item-description {
   margin: 20px 0;
   text-align: center;
 }
-/* line 31, ../scss/layout/product.scss */
+/* line 39, ../scss/layout/product.scss */
 .item-description .item-title {
   font-size: 14px;
   font-weight: 700;
@@ -707,12 +760,12 @@ ol.products-list li .item-container a.product-image img {
   padding-bottom: 10px;
   color: #314350;
 }
-/* line 38, ../scss/layout/product.scss */
+/* line 46, ../scss/layout/product.scss */
 .item-description .item-price {
   font-size: 14px;
   padding-bottom: 10px;
 }
-/* line 42, ../scss/layout/product.scss */
+/* line 50, ../scss/layout/product.scss */
 .item-description .item-special-price {
   color: #f05050;
 }

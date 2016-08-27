@@ -1,5 +1,9 @@
 ol.products-list {
   margin-right: -19px;
+  @media (max-width: $max-mobile-width) {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
   li {
     text-align: center;
     padding-bottom: 20px;
@@ -7,6 +11,10 @@ ol.products-list {
     &.col-4 {
       width: 23%;
       margin-right: 2%;
+      @media (max-width: $max-mobile-width) {
+        width: 46%;
+        margin-right: 4%;
+      }
     }
     .item-container {
       position: relative;
