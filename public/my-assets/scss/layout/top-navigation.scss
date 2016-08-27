@@ -1,0 +1,186 @@
+.navigation {
+  .desktop & {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    height: 28px;
+    line-height: 28px;
+    z-index: 10;
+    display: block;
+    nav{
+      ul {
+        li {
+          position: relative;
+          float: left;
+          margin: 0;
+          padding: 0;
+          a {
+            display: block;
+            color: $blue-text-color;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            line-height: 28px;
+            padding: 0 20px;
+          }
+          &.current-item {
+            a {
+              color: $active-color;
+            }
+          }
+          &:hover, &:focus {
+            background: $nav-hover-dark-color;
+            a {
+              color: #fff;
+            }
+          }
+          &:hover > ul {
+            display: block;
+            border-top: 5px solid $brand-color;
+            background-color: $nav-children-bg-color;
+            &:before {
+              content:'';
+              position:absolute;
+              width:100%;
+              height:5px;
+              background: #3cc0c5; /* Old browsers */
+              background: -moz-linear-gradient(top,  #5fe8ed 0%, #3cc0c5 20%, #3cc0c5 50%, #3cc0c5 84%, #5fe8ed 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(top,  #5fe8ed 0%,#3cc0c5 20%,#3cc0c5 50%,#3cc0c5 84%,#5fe8ed 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom,  #5fe8ed 0%,#3cc0c5 20%,#3cc0c5 50%,#3cc0c5 84%,#5fe8ed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fe8ed', endColorstr='#5fe8ed',GradientType=0 ); /* IE6-9 */
+              top:-5px;
+              left:0;
+            }
+            top: 25px;
+            li {
+              -webkit-transition: background-color 0.2s;
+              -moz-transition: background-color 0.2s;
+              -o-transition: background-color 0.2s;
+              transition: background-color 0.2s;
+              a {
+                color: $blue-text-color;
+              }
+              &:hover {
+                a {
+                  color: #fff;
+                }
+                ul {
+                  top: -15px;
+                  li {
+                    a {
+                      color: $blue-text-color;
+                    }
+                    &:hover {
+                      a {
+                        color: #fff;
+                      }
+                    }
+                  }
+                }
+              }
+              &.parent {
+                a {
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    right: 10px;
+                    top: 11px;
+                    width: 0;
+                    height: 0;
+                    border-top: 4px solid transparent;
+                    border-bottom: 4px solid transparent;
+                    border-left: 4px solid #31434f;
+                  }
+                }
+              }
+              &:hover {
+                &.parent {
+                  a {
+                    &:after {
+                      border-left: 4px solid #fff;
+                    }
+                  }
+                  ul {
+                    li {
+                      a {
+                        &:after {
+                          display: none;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        ul {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #fff;
+          padding: 0;
+          li {
+            float: none;
+            width: 130px;
+            a {
+              line-height: 120%;
+              padding: 8px 15px;
+            }
+            &:hover > ul {
+              &:before {
+                background: #fff;
+              }
+              top: 0;
+            }
+          }
+          ul {
+            top: 0;
+            left: 100%;
+          }
+        }
+      }
+    }
+    nav + nav {
+      position: absolute;
+      right:0;
+    }
+  }
+  .mobile & {
+    display: none;
+    position: absolute;
+    top: 100px;
+    z-index: 1000;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 2px solid $brand-color;
+    ul {
+      li {
+        border-top: 1px solid $brand-color;
+       a {
+         text-transform: uppercase;
+         text-decoration: none;
+         color: $blue-text-color;
+         font-weight: 700;
+         padding: 0 20px;
+         line-height: 36px;
+       }
+        ul {
+          text-indent: 10px;
+        }
+        &.parent {
+          ul {
+            text-indent: 40px;
+          }
+        }
+        &.current-item {
+          a {
+            color: $active-color;
+          }
+        }
+      }
+    }
+  }
+}

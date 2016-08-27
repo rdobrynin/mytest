@@ -63,6 +63,9 @@
           padding-bottom: 5px;
           margin-top: -15px;
           font-weight: 700;
+          @media (max-width: 365px) {
+            line-height: 1.2;
+          }
         }
         h2 {
           text-transform: uppercase;
@@ -70,6 +73,10 @@
           width: 300px;
           line-height: 1.3;
           padding-bottom: 5px;
+          @media (max-width: $max-mobile-width) {
+            width: 100%;
+            padding-bottom: 20px;
+          }
         }
         p {
           font-size: 18px;
@@ -112,9 +119,6 @@
         text-transform: uppercase;
         padding: 0 10px;
       }
-
-
-
     }
   }
 }

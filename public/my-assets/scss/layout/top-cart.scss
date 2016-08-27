@@ -3,25 +3,72 @@
   min-width: 210px;
   position: absolute;
   right: 0;
-  background-color: #fff;
   padding: 0 10px;
   border-radius: 4px;
   height: 36px;
-  border: 1px solid #b6c2c9;
   top: 36px;
   text-align: center;
+  border: 1px solid #b6c2c9;
+  @media (max-width: $max-mobile-width) {
+    width: 45px;
+    min-width: 45px;
+    margin-right: 10px;
+    right: 60px;
+    border: 0;
+  }
+
+  @media (max-width: 365px) {
+    width: 100%;
+    min-width: 45px;
+    margin-right: 0;
+    right: 0;
+  }
+
+
+
  a {
    text-decoration: none;
    font: 12px/36px $open-sans;
    font-weight: 400;
    color: $blue-text-color;
+
+   .minicart {
+     height: 36px;
+     width: 45px;
+     position: absolute;
+     display: block;
+     top: 0;
+     border-radius: 3px;
+
+     @media (max-width: $max-mobile-width) {
+       background-color: #edf1f2;
+       border: 1px solid #edf1f2;
+       left: 5px;
+       height: 36px;
+       width: 45px;
+       position: absolute;
+       display: block;
+       top: 0;
+       right: 0;
+       border-radius: 3px;
+     }
+
+     @media (max-width: 365px) {
+       float: right;
+       margin-top: 0;
+       margin-right: 57px;
+       position: relative;
+     }
+
+     left: 0;
+   }
    strong {
      font-weight: 700;
      padding-left: 2px;
    }
    img {
      vertical-align: sub;
-     margin-right: 13px;
+     margin-right: 2px;
      top: 2px;
      position: relative;
      border-radius: $default-border-radius;
@@ -30,10 +77,24 @@
   &:hover {
     cursor: pointer;
   }
+
+  .topcart {
+    padding-left: 28px;
+    #total-qty-item, .item-text,  strong {
+      @media (max-width: $max-mobile-width) {
+        display: none;
+      }
+    }
+  }
+
 }
 
 .shopping-topcart-wrapper {
   min-width: 210px;
+  @media (max-width: $max-mobile-width) {
+    min-width: 45px;
+    Z-INDEX: 1;
+  }
   width: auto;
   position: absolute;
   right: -1px;
@@ -42,6 +103,9 @@
   z-index: 100;
   padding-top: 5px;
   min-height: 35px;
+  @media (max-width: 365px) {
+    width: 100%;
+  }
   .shopping-topcart-items {
     display: none;
     min-width: 270px;
@@ -56,6 +120,22 @@
     background-color: #fff;
     z-index: 100;
     padding-top: 5px;
+    @media (max-width: 365px) {
+      right: 0;
+      display: none;
+      min-width: 270px;
+      width: 100%;
+      position: relative;
+      border-radius: 0;
+      border: 0;
+      float: left;
+      text-align: center;
+      background-color: #fff;
+      z-index: 100;
+      padding-top: 5px;
+      border-bottom: 2px solid $brand-color;
+      padding-bottom: 10px;
+    }
     li {
       float: left;
       position: relative;

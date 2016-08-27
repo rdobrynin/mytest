@@ -1,39 +1,27 @@
 /*
-Error: Undefined variable: "$border-grey-color".
-        on line 6 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/header.scss
+Error: Undefined variable: "$max-mobile-width".
+        on line 5 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/header.scss
 
 1: header {
 2:   float: left;
 3:   width: 100%;
 4:   height: 130px;
-5:   .container {
-6:     border-bottom: 5px solid $border-grey-color;
+5:   @media (max-width: $max-mobile-width) {
+6:     height: 80px;
 7:   }
-8:   #logo {
-9:     position: absolute;
-10:     left: 0;
-11:     top: 25px;
+8:   .container {
+9:     border-bottom: 5px solid $border-grey-color;
+10:       @media (max-width: $max-mobile-width) {
 
 Backtrace:
-C:/MAMP/htdocs/vaimo/public/my-assets/scss/header.scss:6
+C:/MAMP/htdocs/vaimo/public/my-assets/scss/header.scss:5
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/list_literal.rb:63:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/list_literal.rb:63:in `_perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:540:in `block in run_interp_no_strip'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:538:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:538:in `run_interp_no_strip'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:545:in `run_interp'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:510:in `visit_media'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
@@ -81,4 +69,4 @@ C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$border-grey-color\".\A         on line 6 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/header.scss\A \A 1: header {\A 2:   float: left;\A 3:   width: 100%;\A 4:   height: 130px;\A 5:   .container {\A 6:     border-bottom: 5px solid $border-grey-color;\A 7:   }\A 8:   #logo {\A 9:     position: absolute;\A 10:     left: 0;\A 11:     top: 25px;"; }
+  content: "Error: Undefined variable: \"$max-mobile-width\".\A         on line 5 of C:/MAMP/htdocs/vaimo/public/my-assets/scss/header.scss\A \A 1: header {\A 2:   float: left;\A 3:   width: 100%;\A 4:   height: 130px;\A 5:   @media (max-width: $max-mobile-width) {\A 6:     height: 80px;\A 7:   }\A 8:   .container {\A 9:     border-bottom: 5px solid $border-grey-color;\A 10:       @media (max-width: $max-mobile-width) {"; }
