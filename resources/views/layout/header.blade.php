@@ -3,7 +3,9 @@
     <a href="javascript:void(0)" class="topcart">
         <span class="minicart"><img src="{{url('my-assets/images/Shopping-Cart-Icon.png')}}" alt="shopping-cart"></span><span id="total-qty-item">0</span>&nbsp;<span>items in your cart</span>&nbsp;<strong>&#8364;<span class="price">75.00</span></strong>
     </a>
-            <ol class="shopping-topcart-items"></ol>
+            <div class="shopping-topcart-wrapper">
+                <ol class="shopping-topcart-items"></ol>
+            </div>
 </div>
 <div class="navigation">
     <nav>

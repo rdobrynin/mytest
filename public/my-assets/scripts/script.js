@@ -2,42 +2,41 @@
 
 $(function () {
   // Global variables
-  var ShoppingCart = $('#top-shopping-cart');
-
-
-  ShoppingCart.hover(
-      function () {
-        console.log('in');
-      },
-
-      function () {
-        console.log('out');
-      }
-  );
-
-
+    var ShoppingCartWrapper = $('.shopping-topcart-wrapper');
+    var ShoppingCartItems = $('.shopping-topcart-items');
         // load cards json
         $.ajax({
             type: 'GET',
             url: 'cart/get',
             dataType:'json',
+            cache: true,
             success: function (data) {
                 if(data.items.length > 0) {
                     $('#total-qty-item').text(data.items.length);
 
                     $.each(data.items , function (index, value){
                         console.log(value);
-                        $('.shopping-topcart-items').show().append(
+                        ShoppingCartItems.append(
                             $('<li />').append(
                                 $('<img />', {src: value.imgSrc, alt: value.name}),
                                     $('<span />', {text: value.name, 'class': 'title-cart'}),
                                     $('<span />', {text: value.qty + ' x \u20AC' + value.price, 'class': 'item-descr'}),
                                     $('<a />', {text: ' x ', 'class': 'remove-item'})
                             )
-                        )
+                        );
                     });
 
-                    $('.shopping-topcart-items').append(
+                    ShoppingCartWrapper.hover(
+                        function () {
+                            ShoppingCartItems.stop().slideDown("fast");
+                        },
+
+                        function () {
+                                ShoppingCartItems.hide();
+                        }
+                    );
+
+                    ShoppingCartItems.append(
                         $('<a />', {text: 'go to checkout', 'class': 'button'})
                     );
                 }
@@ -86,7 +85,7 @@ $(function () {
 
 
     // remove item from top cart
-    $('.remove-item', $('.shopping-topcart-items')).on('click', function(){
+    $('.remove-item', ShoppingCartItems).on('click', function(){
        alert('remove item: ' + $(this).closest('li').find('.title-cart').text());
     });
 });

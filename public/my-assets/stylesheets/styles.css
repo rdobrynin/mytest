@@ -578,35 +578,48 @@ form input {
 }
 
 /* line 35, ../scss/layout/top-cart.scss */
-.shopping-topcart-items {
+.shopping-topcart-wrapper {
+  min-width: 210px;
+  width: auto;
+  position: absolute;
+  right: -1px;
+  top: 0;
+  text-align: center;
+  z-index: 100;
+  padding-top: 5px;
+  min-height: 35px;
+}
+/* line 45, ../scss/layout/top-cart.scss */
+.shopping-topcart-wrapper .shopping-topcart-items {
   display: none;
   min-width: 270px;
   width: auto;
-  position: absolute;
+  position: relative;
   right: -1px;
   border-radius: 4px;
   border: 1px solid #b6c2c9;
   top: 39px;
+  float: left;
   text-align: center;
   background-color: #fff;
   z-index: 100;
   padding-top: 5px;
 }
-/* line 48, ../scss/layout/top-cart.scss */
-.shopping-topcart-items li {
+/* line 59, ../scss/layout/top-cart.scss */
+.shopping-topcart-wrapper .shopping-topcart-items li {
   float: left;
   position: relative;
   width: 100%;
 }
-/* line 52, ../scss/layout/top-cart.scss */
-.shopping-topcart-items li img {
+/* line 63, ../scss/layout/top-cart.scss */
+.shopping-topcart-wrapper .shopping-topcart-items li img {
   width: 60px;
   position: relative;
   float: left;
   border-radius: 3px;
 }
-/* line 58, ../scss/layout/top-cart.scss */
-.shopping-topcart-items li .title-cart {
+/* line 69, ../scss/layout/top-cart.scss */
+.shopping-topcart-wrapper .shopping-topcart-items li .title-cart {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 12px;
@@ -614,22 +627,22 @@ form input {
   left: 70px;
   position: absolute;
 }
-/* line 66, ../scss/layout/top-cart.scss */
-.shopping-topcart-items li .item-descr {
+/* line 77, ../scss/layout/top-cart.scss */
+.shopping-topcart-wrapper .shopping-topcart-items li .item-descr {
   position: absolute;
   left: 70px;
   top: 35px;
   font-size: 12px;
 }
-/* line 72, ../scss/layout/top-cart.scss */
-.shopping-topcart-items li a.remove-item {
+/* line 83, ../scss/layout/top-cart.scss */
+.shopping-topcart-wrapper .shopping-topcart-items li a.remove-item {
   position: absolute;
   right: 15px;
   top: 10px;
   text-indent: -9999em;
 }
-/* line 77, ../scss/layout/top-cart.scss */
-.shopping-topcart-items li a.remove-item:after {
+/* line 88, ../scss/layout/top-cart.scss */
+.shopping-topcart-wrapper .shopping-topcart-items li a.remove-item:after {
   content: '';
   background-image: url(../../my-assets/images/remove-icon.png);
   background-repeat: no-repeat;
@@ -640,8 +653,8 @@ form input {
   left: -10px;
   top: 9px;
 }
-/* line 90, ../scss/layout/top-cart.scss */
-.shopping-topcart-items .button {
+/* line 101, ../scss/layout/top-cart.scss */
+.shopping-topcart-wrapper .shopping-topcart-items .button {
   float: right;
   margin: 10px;
   color: #fff;
