@@ -92,7 +92,7 @@ $(function () {
                     });
                 }
                 ShoppingCartItems.append(
-                    $('<a />', {text: 'go to checkout', 'class': 'button'})
+                    $('<a />', {href: 'javascript:void(0);', onclick: 'alert("checkout")', text: 'go to checkout', 'class': 'button'})
                 );
             }
         },
