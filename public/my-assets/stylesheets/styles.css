@@ -964,29 +964,36 @@ ol.products-list {
 @media (max-width: 767px) {
   /* line 1, ../scss/layout/product.scss */
   ol.products-list {
-    margin-right: 4%;
+    margin-right: 0;
     margin-left: 4%;
   }
 }
-/* line 7, ../scss/layout/product.scss */
+@media (max-width: 939px) and (min-width: 768px) {
+  /* line 1, ../scss/layout/product.scss */
+  ol.products-list {
+    margin-left: 15px;
+    width: 98%;
+  }
+}
+/* line 11, ../scss/layout/product.scss */
 ol.products-list li {
   text-align: center;
   padding-bottom: 20px;
   float: left;
 }
-/* line 11, ../scss/layout/product.scss */
+/* line 15, ../scss/layout/product.scss */
 ol.products-list li.col-4 {
   width: 23%;
   margin-right: 2%;
 }
 @media (max-width: 767px) {
-  /* line 11, ../scss/layout/product.scss */
+  /* line 15, ../scss/layout/product.scss */
   ol.products-list li.col-4 {
     width: 46%;
     margin-right: 4%;
   }
 }
-/* line 19, ../scss/layout/product.scss */
+/* line 23, ../scss/layout/product.scss */
 ol.products-list li .item-container {
   position: relative;
   border: 1px solid #b6c2c9;
@@ -996,19 +1003,19 @@ ol.products-list li .item-container {
   margin-right: auto;
   text-align: center;
 }
-/* line 27, ../scss/layout/product.scss */
+/* line 31, ../scss/layout/product.scss */
 ol.products-list li .item-container a.product-image img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* line 36, ../scss/layout/product.scss */
+/* line 40, ../scss/layout/product.scss */
 .item-description {
   margin: 20px 0;
   text-align: center;
 }
-/* line 39, ../scss/layout/product.scss */
+/* line 43, ../scss/layout/product.scss */
 .item-description .item-title {
   font-size: 14px;
   font-weight: 700;
@@ -1016,12 +1023,12 @@ ol.products-list li .item-container a.product-image img {
   padding-bottom: 10px;
   color: #314350;
 }
-/* line 46, ../scss/layout/product.scss */
+/* line 50, ../scss/layout/product.scss */
 .item-description .item-price {
   font-size: 14px;
   padding-bottom: 10px;
 }
-/* line 50, ../scss/layout/product.scss */
+/* line 54, ../scss/layout/product.scss */
 .item-description .item-special-price {
   color: #f05050;
 }

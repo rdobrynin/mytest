@@ -20,10 +20,30 @@ $(function () {
            rootObject.addClass('desktop');
        }
     };
+
+    function toggleCart() {
+        if (rootObject.hasClass('desktop')) {
+            ShoppingCartWrapper.hover(
+                function () {
+                    ShoppingCartItems.stop().slideDown("fast");
+                },
+
+                function () {
+                    ShoppingCartItems.hide();
+                }
+            );
+        }
+        else if (rootObject.hasClass('mobile')) {
+            $('.topcart').on("click", function () {
+                ShoppingCartItems.toggle();
+            });
+        }
+    }
     toggleRootClass(rootObject);
     windowObject.resize(function() {
         toggleRootClass(rootObject);
-        ShoppingCartItems.hide();
+        //ShoppingCartItems.hide();
+        toggleCart();
     }).resize(); // trigger resize event initially
 
 
@@ -75,22 +95,10 @@ $(function () {
                 });
 
                 $('span.price', $("#top-shopping-cart")).text(Data.totalPrice);
-                if(rootObject.hasClass('desktop')) {
-                    ShoppingCartWrapper.hover(
-                        function () {
-                            ShoppingCartItems.stop().slideDown("fast");
-                        },
 
-                        function () {
-                            ShoppingCartItems.hide();
-                        }
-                    );
-                }
-                else if(rootObject.hasClass('mobile')) {
-                    $('.topcart').on("click", function(){
-                        ShoppingCartItems.toggle();
-                    });
-                }
+
+
+
                 ShoppingCartItems.append(
                     $('<a />', {href: 'javascript:void(0);', onclick: 'alert("checkout")', text: 'go to checkout', 'class': 'button'})
                 );

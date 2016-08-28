@@ -1,8 +1,12 @@
 ol.products-list {
   margin-right: -19px;
   @media (max-width: $max-mobile-width) {
-    margin-right: 4%;
+    margin-right: 0;
     margin-left: 4%;
+  }
+  @media (max-width: 939px) and (min-width: 768px) {
+    margin-left: 15px;
+    width: 98%;
   }
   li {
     text-align: center;
